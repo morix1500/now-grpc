@@ -17,7 +17,7 @@ func (h HelloService) Hello(ctx context.Context, in *pb.HelloRequest) (*pb.Hello
         }, nil
 }
 
-func Handler(w http.ResponseWriter, r *http.Request) {
+func Hello(w http.ResponseWriter, r *http.Request) {
         s := grpc.NewServer()
         pb.RegisterHelloServiceServer(s, HelloService{})
 
