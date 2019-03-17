@@ -3,5 +3,10 @@
     "name": "go",
     "builds": [
         { "src": "*.go", "use": "@now/go" }
-    ]
+    ],
+    "build": {
+        "env": {
+          "GO111MODULE": "on"
+        }
+    }
 }
